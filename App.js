@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, Dimensions, StyleSheet, ScrollView } from "react-native";
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 export default function App() {
+  const [location, setLocation] = useState();
   return (
     <View style={styles.container}>
       <View style={styles.city}>
@@ -15,7 +16,7 @@ export default function App() {
         contentContainerStyle={styles.weather}
       >
         <View style={styles.day}>
-          <Text style={styles.temp}>27</Text>
+          <Text style={styles.temp}>25</Text>
           <Text style={styles.description}>Sunny</Text>
         </View>
         <View style={styles.day}>
